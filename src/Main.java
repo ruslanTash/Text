@@ -2,16 +2,17 @@ public class Main {
     //Реализуйте метод isPowerOfThree() который определяет, является ли переданное число натуральной степенью тройки.
     // апример, число 27 – это третья степень (33), а 81 – четвёртая (34).
     public static boolean isPowerOfThree(double x) {
-        boolean isThree = false;
+//        boolean isThree = false;
         while (x > 1) {
             x = x / 3;
         }
-        if (x == 1) {
-            isThree = true;
-        } else {
-            isThree = false;
-        };
-        return isThree;
+//        if (x == 1) {
+//            isThree = true;
+//        } else {
+//            isThree = false;
+//        };
+//        return isThree;
+        return (x == 1) ? true : false;
     }
     public static void fizzBuzz(int begin, int end) {
         for (int i = begin; i <= end; i++) {
@@ -32,7 +33,7 @@ public class Main {
     //и проверяет, является ли эта строка корректной. Пустая строка (отсутствие скобок) считается корректной.
     public static boolean isBalanced(String str) {
         int count = 0;
-        boolean isBalanced = (count == 0);
+//        boolean isBalanced = (count == 0);
         for (int i = 0; i < str.length(); i++) {
             if (str.charAt(i) == '(') {
                 count++;
@@ -42,7 +43,8 @@ public class Main {
                 return false;
             }
         }
-        return isBalanced;
+//        return isBalanced;
+        return (count == 0) ? true : false;
     }
     //Реализуйте метод addDigits(), который принимает на вход неотрицательное целое число и возвращает другое число,
     //полученное из первого следующим преобразованием:
@@ -93,9 +95,9 @@ public class Main {
         return n2;
     }
     public static void main(String[] args) {
-        System.out.println(isPowerOfThree(1));
+        System.out.println(isPowerOfThree(6));
         fizzBuzz(15, 18);
-        System.out.println(isBalanced(")("));
+        System.out.println(isBalanced("(()())"));
         System.out.println(diff(120, 280));
         System.out.println(fib(3));
         System.out.println(fib(5));
